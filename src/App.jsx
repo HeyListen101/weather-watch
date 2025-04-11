@@ -40,7 +40,7 @@ function App() {
           city: data.name,
           country: data.sys.country,
           temperature: data.main.temp,
-          weather: data.weather[0].main,
+          weather: data.weather[0].id,
           time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true }),
           windSpeed: data.wind.speed,
         })
@@ -59,7 +59,8 @@ function App() {
             dailyForecast[date] = {
               date: date,
               temp: Math.round(item.main.temp),
-              weather: item.weather[0].description
+              weather: item.weather[0].id,
+              time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true }),
             }
           }
         })
@@ -68,7 +69,6 @@ function App() {
       .catch((error) => console.error("Error fetching data:", error))
 
       setSearch('')
-      console.log(forecast)
     }
   }
 
@@ -76,12 +76,12 @@ function App() {
       <div className='flex items-center justify-center min-h-screen bg-[url(./assets/background.jpg)] bg-no-repeat bg-cover bg-center font-[Poppins] text-white'>
         <Header />
         <div className='h-125 w-125 flex flex-col gap-10 items-center'>
-          <CurrentWeatherInfo city={weatherInfo.city} country={weatherInfo.country} temp={weatherInfo.temperature} time={weatherInfo.time} windSpeed={weatherInfo.windSpeed}/>
+          <CurrentWeatherInfo city={weatherInfo.city} country={weatherInfo.country} temp={weatherInfo.temperature} time={weatherInfo.time} windSpeed={weatherInfo.windSpeed} weatherId={weatherInfo.weather} />
           <div className='w-[100%] relative'>
               <img src='./assets/search.svg' className='size-4 absolute left-3 top-1/2 transform -translate-y-1/2'></img>
               <input 
                   type='text'
-                  placeholder='Search City'
+                  placeholder='Search any city around the world'
                   value={search}
                   onChange={inputChange}
                   onKeyDown={searchLocation}
