@@ -1,12 +1,12 @@
 import React from 'react'
-import clearSkyDay from '/assets/clearSkyDay.svg';
-import clearSkyNight from '/assets/clearSkyNight.svg';
-import clouds from '/assets/clouds.svg';
-import drizzle from '/assets/drizzle.svg';
-import mist from '/assets/mist.svg';
-import rain from '/assets/rain.svg';
-import snow from '/assets/snow.svg';
-import thunderstorm from '/assets/thunderstorm.svg';
+import clearSkyDay from '../assets/clearSkyDay.svg';
+import clearSkyNight from '../assets/clearSkyNight.svg';
+import clouds from '../assets/clouds.svg';
+import drizzle from '../assets/drizzle.svg';
+import mist from '../assets/mist.svg';
+import rain from '../assets/rain.svg';
+import snow from '../assets/snow.svg';
+import thunderstorm from '../assets/thunderstorm.svg';
 
 function DayForecast({day, forecast}) {
   const iconMap = {clearSkyDay, clearSkyNight, clouds, drizzle, mist, rain, snow, thunderstorm};
