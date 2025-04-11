@@ -21,7 +21,7 @@ function CurrentWeatherInfo({ city, country, temp, time, windSpeed, weatherId })
   } else {
     weatherIcon = "clouds"
   }
-  let srcIcon = "./assets/" + weatherIcon + ".svg"
+  let srcIcon = "/assets/" + weatherIcon + ".svg"
 
   return (
     <div className='flex flex-col w-[75%]'>
@@ -32,9 +32,9 @@ function CurrentWeatherInfo({ city, country, temp, time, windSpeed, weatherId })
         </div>
         <span className='text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium'>{city}, {country}</span>
         <div className='flex items-center mt-1'>
-            <img src='./assets/clock.svg' className='size-5 mr-2'></img>
+            <img src='/assets/clock.svg' className='size-5 mr-2'></img>
             <span>{time}</span>
-            <img src='./assets/wind.svg' className='size-5 ml-5 mr-2'></img>
+            <img src='/assets/wind.svg' className='size-5 ml-5 mr-2'></img>
             <span>{windSpeed} <strong>m/s</strong></span>
         </div>
     </div>

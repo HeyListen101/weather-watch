@@ -2,7 +2,7 @@ import React from 'react'
 
 function DayForecast({day, forecast}) {
   let temp = 23
-  let srcIcon = "./assets/clouds.svg"
+  let srcIcon = "/assets/clouds.svg"
   if (forecast != null) {
     temp = forecast['temp']
     let time = forecast['time']
@@ -27,7 +27,7 @@ function DayForecast({day, forecast}) {
     } else {
       weatherIcon = "clouds"
     }
-    srcIcon = "./assets/" + weatherIcon + ".svg"
+    srcIcon = "/assets/" + weatherIcon + ".svg"
   }
 
   return (
