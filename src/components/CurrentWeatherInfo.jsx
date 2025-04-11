@@ -22,15 +22,15 @@ function CurrentWeatherInfo({ city, country, temp, time, windSpeed, weatherId })
     weatherIcon = "clouds"
   }
   let srcIcon = "./assets/" + weatherIcon + ".svg"
-  
+
   return (
     <div className='flex flex-col w-[75%]'>
         <div className='flex'>
-            <span className='text-9xl font-bold'>{temp ? Math.floor(temp) : 29}</span>
-            <span className='text-4xl font-semibold'>°C</span>
-            <img src={srcIcon} className='ml-5 size-20 self-center'></img>
+            <span className='text-7xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl font-bold'>{temp ? Math.floor(temp) : 29}</span>
+            <span className='text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold'>°C</span>
+            <img src={srcIcon} className='size-18 sm:size-18 md:size-19 lg:size-19 xl:size-20 ml-5 self-center'></img>
         </div>
-        <span className='text-4xl font-medium'>{city}, {country}</span>
+        <span className='text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium'>{city}, {country}</span>
         <div className='flex items-center mt-1'>
             <img src='./assets/clock.svg' className='size-5 mr-2'></img>
             <span>{time}</span>

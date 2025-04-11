@@ -75,7 +75,7 @@ function App() {
   return (
       <div className='flex items-center justify-center min-h-screen bg-[url(./assets/background.jpg)] bg-no-repeat bg-cover bg-center font-[Poppins] text-white'>
         <Header />
-        <div className='h-125 w-125 flex flex-col gap-10 items-center'>
+        <div className='w-80 h-100 sm:size-90 md:size-100 lg:size-110 xl:size-125 flex flex-col gap-10 items-center'>
           <CurrentWeatherInfo city={weatherInfo.city} country={weatherInfo.country} temp={weatherInfo.temperature} time={weatherInfo.time} windSpeed={weatherInfo.windSpeed} weatherId={weatherInfo.weather} />
           <div className='w-[100%] relative'>
               <img src='./assets/search.svg' className='size-4 absolute left-3 top-1/2 transform -translate-y-1/2'></img>

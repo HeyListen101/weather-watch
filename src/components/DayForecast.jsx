@@ -32,9 +32,9 @@ function DayForecast({day, forecast}) {
 
   return (
     <div className='flex flex-col items-center'>
-      <span className='font-bold'>{day}</span>
-      <img src={srcIcon} className='size-12.5 m-2'></img>
-      <span className='font-medium'>{temp}°C</span>
+      <span className='text-xs sm:text-xs md:text-base lg:text-lg xl:text-xl font-bold'>{day}</span>
+      <img src={srcIcon} className='size-8 sm:size-10 md:size-11 lg:size-12 xl:size-12.5 m-2'></img>
+      <span className='text-base sm:text-base md:text-lg lg:text-xl xl:text-xl font-medium'>{temp}°C</span>
     </div>
   )
 }
