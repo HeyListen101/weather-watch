@@ -27,7 +27,7 @@ function DayForecast({day, forecast}) {
     } else {
       weatherIcon = "clouds"
     }
-    srcIcon = "/assets/" + weatherIcon + ".svg"
+    const srcIcon = `/assets/${weatherIcon}.svg`;
   }
 
   return (

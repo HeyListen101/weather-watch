@@ -21,7 +21,7 @@ function CurrentWeatherInfo({ city, country, temp, time, windSpeed, weatherId })
   } else {
     weatherIcon = "clouds"
   }
-  let srcIcon = "/assets/" + weatherIcon + ".svg"
+  const srcIcon = `/assets/${weatherIcon}.svg`
 
   return (
     <div className='flex flex-col w-[75%]'>
